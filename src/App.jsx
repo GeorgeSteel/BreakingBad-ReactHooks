@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+function Phrase({phrase}) {
+  return(
+    <div className="frase">
+      <h1>{ phrase.quote }</h1>
+      <p>- { phrase.author }</p>
+    </div>
+  )
+}
+
 function App() {
   const [phrase, setPhrase] = useState({});
 
@@ -17,8 +26,10 @@ function App() {
   )
 
   return (
-    <div className="">
-      
+    <div className="contenedor">
+      <Phrase
+        phrase={ phrase }
+      />
     </div>
   );
 }
