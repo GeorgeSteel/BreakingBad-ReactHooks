@@ -30,6 +30,7 @@ function App() {
       <Phrase
         phrase={ phrase }
       />
+      <button onClick={requestAPI}>Get New Phrase</button>
     </div>
   );
 }
